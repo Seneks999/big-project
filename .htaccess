@@ -1,0 +1,6 @@
+RewriteEngine On
+
+
+RewriteRule ^(.*).html$ index.php?do=$1 [L]
+RewriteRule ^$ index.php [L]
+

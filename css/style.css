@@ -1,0 +1,277 @@
+/* =========== General styles =========== */
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@font-face {
+  font-family: "Candara";
+  src: url("./fonts/candara.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* =========== Header =========== */
+/* =========== Header first line =========== */
+.header-background-line {
+  display: block;
+  background-color: #404040;
+  margin: 0 auto;
+}
+
+.header--phone--mail--address {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-style: normal;
+  color: #fff;
+  padding: 10px 30px;
+}
+
+.header-contacts {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.phone-number-header-one {
+  color: #fff;
+  font-size: 14px;
+}
+
+.phone-number-header-two {
+  margin-left: 22px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.mail-header {
+  color: #fff;
+}
+
+.header-svg {
+  fill: #ff6a00;
+  margin-right: 10px;
+}
+
+.header-adress {
+  margin: 0;
+}
+
+.header-adress-line {
+  border: none;
+  height: 2px;
+  background-color: #ff6a00;
+  margin: 0;
+}
+
+/* =========== Header second line =========== */
+.header-logo-social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #404040;
+
+  padding: 0 14px;
+  border-radius: 10px;
+}
+
+.header-logo-link {
+  font-family: "Candara", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #ff6a00;
+}
+
+.header-logo-kyiv {
+  color: #fff;
+}
+
+/* .header-logo-social .header-logo-link {
+  transition: transform 0.3s ease-in-out;
+}
+
+.header-logo-social .header-logo-link:hover {
+  transform: scale(1.2);
+} */
+
+.header-logo-link {
+  transition: transform 0.3s ease-in-out;
+}
+
+.header-logo-link:hover {
+  transform: scale(1.2);
+}
+
+.header-social-icon {
+  display: flex;
+  align-items: center;
+  list-style: none; /* Забирає маркери у списку */
+  gap: 20px; /* Відступи між іконками */
+  padding: 0;
+  margin: 0;
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*  =========== Dropdown menu GPT =========== */
+/* Основне меню */
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Контейнер для пункту меню */
+.header-nav-link {
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+  border: 2px solid #ff6a00;
+  padding: 0px 6px;
+  border-radius: 8px;
+  max-height: 38px;
+}
+
+/* Випадаюче меню */
+.dropdown {
+  /* display: none; Спочатку приховано */
+  position: absolute;
+  top: 100%; /* Розташування під головним пунктом меню */
+  left: 0;
+  background-color: #404040;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  list-style: none;
+  padding: 10px 0;
+  margin-top: 3px;
+
+  /* Початкові стилі для плавності GPT */
+  opacity: 0;
+  transform: translateY(-10px); /* Зміщення вгору */
+  pointer-events: none; /* Щоб елементи не реагували на курсор у прихованому стані */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Додаємо плавність */
+}
+
+/* Елементи списку */
+.dropdown li {
+  padding: 10px 20px;
+}
+
+/* Посилання у випадаючому меню */
+.dropdown li a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  width: 500px;
+}
+
+/* Ефект наведення */
+.dropdown li a:hover {
+  /* background-color: #ff6a00; */
+  color: #ff6a00;
+}
+
+/* Показ випадаючого меню при наведенні */
+.header-nav-link:hover .dropdown {
+  opacity: 1;
+  transform: translateY(0); /* Повертаємо до початкового положення */
+  pointer-events: auto; /* Увімкнути взаємодію */
+}
+
+.header-nav-link {
+  text-decoration: none;
+  font-size: 20px;
+  border: 2px solid #ff6a00;
+  padding: 0px 6px;
+  border-radius: 8px;
+  max-height: 38px;
+}
+
+.header-nav-link:hover {
+  border: 2px solid #fff;
+}
+
+.header-nav-link-text {
+  color: #fff;
+}
+
+.header-nav-link:hover .unicode {
+  color: #fff; /* Колір символу змінюється на білий */
+}
+
+.header-nav-uk {
+  font-size: 20px;
+  border: 2px solid #ffd800;
+  padding: 0px 6px;
+  border-radius: 8px;
+  max-height: 38px;
+}
+
+.nav-link-uk-text {
+  color: #fff;
+}
+
+.header-nav-en {
+  font-size: 20px;
+  border: 2px solid #0094ff;
+  padding: 0px 6px;
+  border-radius: 8px;
+
+  max-height: 38px;
+}
+
+.nav-link-en-text {
+  color: #fff;
+}
+
+.unicode {
+  color: #ff6a00;
+}
+
+.dropdown-li {
+  background-color: #5c5c5c;
+}
