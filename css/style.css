@@ -171,34 +171,64 @@ a {
   font-size: 48px;
   font-weight: 700;
   color: #ff6a00;
-
   position: relative;
+  display: inline-block;
+
+  transition: color 0.3s ease-in-out; /* Плавна зміна кольору */
 }
 
 .header-logo-kyiv {
   color: #fff;
-}
-
-.header-logo-link {
-  transition: transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out; /* Плавна зміна кольору */
 }
 
 .header-logo-link:hover {
-  /* transform: scale(1.2); */
+  color: #fff;
+}
+
+.header-logo-link:hover .header-logo-kyiv {
+  color: #ff6a00;
+}
+
+.header-block-img,
+.header-block-img-two {
+  position: absolute;
+  top: 6px; /* Вирівнює по висоті */
+  left: 135px; /* Вирівнює по горизонталі */
+  width: 24px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.header-block-img {
+  opacity: 1; /* Зображення за замовчуванням */
+  z-index: 2;
+}
+
+.header-block-img-two {
+  opacity: 0; /* Сховане зображення */
+  z-index: 1;
+}
+
+.header-logo-link:hover .header-block-img {
+  opacity: 0; /* Ховає перше зображення */
+}
+
+.header-logo-link:hover .header-block-img-two {
+  opacity: 1; /* Показує друге зображення */
+}
+
+/* .header-block-img {
+  display: block;
+  position: absolute;
+  margin-left: 135px;
+  margin-top: 6px;
 }
 
 .header-block-img-two {
   display: none;
   position: absolute;
   margin-left: 130px;
-}
-
-.header-block-img {
-  display: block;
-  position: absolute;
-  margin-left: 135px;
-  margin-top: 6px;
-}
+} */
 
 .header-social-icon {
   display: flex;

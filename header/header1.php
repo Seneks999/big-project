@@ -71,13 +71,13 @@
         <img
         class="header-block-img"
         src="../img/logo-1-w.png"
-        alt=""
+        alt="Logo"
         width="24"
       />
       <img
         class="header-block-img-two"
         src="../img/logo-1-2.png"
-        alt=""
+        alt="Logo Hover"
         width="24"
       />
         Steli<span class="header-logo-kyiv">Kyiv</span>
