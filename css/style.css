@@ -1,10 +1,64 @@
 /* =========== General styles =========== */
+html,
+body {
+  /* margin: 0;
+  padding: 0; */
+  height: 100%;
+
+  overflow: hidden; /* Забороняє прокручування всього документа */
+}
+
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   line-height: 1.6;
   color: #333;
+
+  position: relative;
+  min-height: 100%;
+}
+
+header {
+  position: fixed; /* Фіксує header у верхній частині */
+  top: 0;
+  left: 0;
+  width: 100%; /* Розтягує header на всю ширину */
+  background-color: #f4f4f4;
+
+  z-index: 10; /* Забезпечує видимість поверх контенту */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тінь для стилю */
+}
+
+footer {
+  position: fixed; /* Фіксує footer внизу */
+
+  /* position: absolute; */
+  bottom: 0;
+
+  left: 0;
+
+  width: 100%;
+  /* background-color: #ddd; */
+  /* padding: 20px; */
+  text-align: center;
+
+  z-index: 10; /* Забезпечує видимість поверх контенту */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Тінь для стилю */
+
+  padding-bottom: 10px;
+  background-color: #404040;
+
+  min-height: 50px;
+}
+
+main {
+  margin-top: 80px; /* Відступ для врахування висоти header */
+  margin-bottom: 50px; /* Відступ для врахування висоти footer */
+  height: calc(100% - 100px); /* Висота, щоб врахувати header і footer */
+  overflow-y: auto; /* Прокручування контенту */
+  /* padding: 20px; */
+  /* background-color: #eaeaea; */
 }
 
 *,
@@ -44,7 +98,6 @@ a {
   font-style: normal;
 }
 
-/* =========== Header =========== */
 /* =========== Header first line =========== */
 .header-background-line {
   display: block;
@@ -118,33 +171,40 @@ a {
   font-size: 48px;
   font-weight: 700;
   color: #ff6a00;
+
+  position: relative;
 }
 
 .header-logo-kyiv {
   color: #fff;
 }
 
-/* .header-logo-social .header-logo-link {
-  transition: transform 0.3s ease-in-out;
-}
-
-.header-logo-social .header-logo-link:hover {
-  transform: scale(1.2);
-} */
-
 .header-logo-link {
   transition: transform 0.3s ease-in-out;
 }
 
 .header-logo-link:hover {
-  transform: scale(1.2);
+  /* transform: scale(1.2); */
+}
+
+.header-block-img-two {
+  display: none;
+  position: absolute;
+  margin-left: 130px;
+}
+
+.header-block-img {
+  display: block;
+  position: absolute;
+  margin-left: 135px;
+  margin-top: 6px;
 }
 
 .header-social-icon {
   display: flex;
   align-items: center;
-  list-style: none; /* Забирає маркери у списку */
-  gap: 20px; /* Відступи між іконками */
+  list-style: none;
+  gap: 20px;
   padding: 0;
   margin: 0;
 }
@@ -155,7 +215,7 @@ a {
   justify-content: center;
 }
 
-/*  =========== Dropdown menu GPT =========== */
+/*  =========== Dropdown menu =========== */
 /* Основне меню */
 .header-nav {
   display: flex;
@@ -174,11 +234,14 @@ a {
   max-height: 38px;
 }
 
+.header-nav-link-text {
+  color: #fff;
+}
+
 /* Випадаюче меню */
 .dropdown {
-  /* display: none; Спочатку приховано */
   position: absolute;
-  top: 100%; /* Розташування під головним пунктом меню */
+  top: 100%;
   left: 0;
   background-color: #404040;
   border-radius: 8px;
@@ -188,11 +251,10 @@ a {
   padding: 10px 0;
   margin-top: 3px;
 
-  /* Початкові стилі для плавності GPT */
   opacity: 0;
-  transform: translateY(-10px); /* Зміщення вгору */
-  pointer-events: none; /* Щоб елементи не реагували на курсор у прихованому стані */
-  transition: opacity 0.3s ease, transform 0.3s ease; /* Додаємо плавність */
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 /* Елементи списку */
@@ -200,8 +262,17 @@ a {
   padding: 10px 20px;
 }
 
+.dropdown .dropdown-second {
+  padding: 6px 0;
+  width: 100%;
+}
+
+.dropdown-li-two {
+  background-color: #5c5c5c;
+}
+
 /* Посилання у випадаючому меню */
-.dropdown li a {
+.dropdown li .dropdown-li-link {
   text-decoration: none;
   color: #fff;
   display: block;
@@ -211,15 +282,14 @@ a {
 
 /* Ефект наведення */
 .dropdown li a:hover {
-  /* background-color: #ff6a00; */
   color: #ff6a00;
 }
 
 /* Показ випадаючого меню при наведенні */
 .header-nav-link:hover .dropdown {
   opacity: 1;
-  transform: translateY(0); /* Повертаємо до початкового положення */
-  pointer-events: auto; /* Увімкнути взаємодію */
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .header-nav-link {
@@ -235,12 +305,8 @@ a {
   border: 2px solid #fff;
 }
 
-.header-nav-link-text {
-  color: #fff;
-}
-
 .header-nav-link:hover .unicode {
-  color: #fff; /* Колір символу змінюється на білий */
+  color: #fff;
 }
 
 .header-nav-uk {
@@ -272,6 +338,109 @@ a {
   color: #ff6a00;
 }
 
-.dropdown-li {
+/* =========== Two dropdown menu ========== */
+.dropdown-second {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-li-link {
+  color: #fff;
+  font-size: 16px;
+}
+
+.dropdown-second > .dropdown-li-link {
+  padding: 10px 20px;
+}
+
+.dropdown-content-second {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin-left: -150px;
+  max-width: 200px;
+  min-width: 150px;
+  margin-top: -30px;
+
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(-10px);
+}
+
+.dropdown-second:hover .dropdown-content-second {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-second-link {
+  display: block;
+  padding: 0;
+  color: #333;
+  background-color: #ffd800;
+  font-size: 16px;
+  margin-left: -30px;
+}
+
+.dropdown-second-link-one {
   background-color: #5c5c5c;
+  padding-left: 20px;
+  color: #fff;
+}
+
+/* =========== Article =========== */
+
+.main-content {
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+.article-block {
+  display: flex;
+  gap: 30px;
+  margin: 30px 16px;
+}
+
+.article-block-img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.article-block-title-text {
+  display: block;
+}
+
+/* ========== Footer =========== */
+.copyright {
+  font-size: 18px;
+  font-weight: 400;
+
+  font-family: "Candara";
+  src: url("./fonts/candara.ttf") format("truetype");
+
+  font-style: normal;
+  margin: 0;
+  color: #fff;
+  padding-top: 10px;
+}
+
+.footer-logo {
+  color: #ff6a00;
+}
+
+.footer-logo-u {
+  color: #ffd800;
+}
+
+.footer-logo-a {
+  color: #0094ff;
+}
+
+.footer-img {
+  margin-left: 6px;
+  margin-right: 6px;
 }

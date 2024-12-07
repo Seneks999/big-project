@@ -68,32 +68,20 @@
   <div class="container">
     <div class="header-logo-social">
       <a class="header-logo-link" href="index.php">
+        <img
+        class="header-block-img"
+        src="../img/logo-1-w.png"
+        alt=""
+        width="24"
+      />
+      <img
+        class="header-block-img-two"
+        src="../img/logo-1-2.png"
+        alt=""
+        width="24"
+      />
         Steli<span class="header-logo-kyiv">Kyiv</span>
       </a>
-
-      <!-- <nav>
-        <ul class="header-nav">
-          <li class="header-nav-link">
-            <a class="header-nav-link-text" href="#">Клієнтам</a>
-          </li>
-
-          <li class="header-nav-link">
-            <a class="header-nav-link-text" href="#">Гарантії якості</a>
-          </li>
-          <li class="header-nav-link">
-            <a class="header-nav-link-text" href="#">Догоівр</a>
-          </li>
-          <li class="header-nav-link">
-            <a class="header-nav-link-text" href="#">Галерея</a>
-          </li>
-          <li class="header-nav-uk">
-            <a class="nav-link-uk-text" href="#">uk</a>
-          </li>
-          <li class="header-nav-en">
-            <a class="nav-link-en-text" href="#">en</a>
-          </li>
-        </ul>
-      </nav> -->
 
       <nav class="header-nav">
         <div class="header-nav-link">
@@ -101,28 +89,46 @@
             >Клієнтам <span class="unicode">▼</span></a
           >
           <ul class="dropdown">
+            <li class="dropdown-li">
+              <a class="dropdown-li-link" href="#">Що таке натяжна стеля?</a>
+            </li>
             <li class="dropdown-li-two">
-              <a href="#"
-                >Як підготувати приміщення до монтажу натяжних стель?</a
+              <a class="dropdown-li-link" href="index.php?do=prepare-room"
+                target="_blank">Як підготувати приміщення до монтажу натяжних стель?</a
               >
             </li>
             <li class="dropdown-li">
-              <a href="#"
+              <a class="dropdown-li-link" href="#"
                 >Технічні і експлуатаційні характеристики натяжних стель</a
               >
             </li>
             <li class="dropdown-li-two">
-              <a href="#">Як доглядати за натяжними стелями з ПВХ</a>
+              <a class="dropdown-li-link" href="#"
+                >З чого зроблено полотно натяжної стелі?</a
+              >
             </li>
             <li class="dropdown-li">
-              <a href="#"
-                >Замовити натяжні стелі в Києві та Київській області</a
+              <a class="dropdown-li-link" href="#"
+                >Як доглядати за натяжними стелями з ПВХ</a
               >
             </li>
             <li class="dropdown-li-two">
-              <a href="#"
-                >Замовити натяжні стелі в Києві та Київській області</a
+              <a class="dropdown-li-link" href="#"
+                >Переваги і недоліки натяжних стель</a
               >
+            </li>
+            <li class="dropdown-li">
+              <a class="dropdown-li-link" href="#"
+                >Як відбувається установка натяжної стелі?</a
+              >
+            </li>
+            <li class="dropdown-li-two">
+              <a class="dropdown-li-link" href="#"
+                >Дизайнерські рішення для натяжних стель</a
+              >
+            </li>
+            <li class="dropdown-li">
+              <a class="dropdown-li-link" href="#" target="_blank">Види натяжних стель</a>
             </li>
           </ul>
         </div>
@@ -136,10 +142,40 @@
             >Догоівр</a
           >
         </div>
+
         <div class="header-nav-link">
           <a class="header-nav-link-text" href="#" data-scroll="#blog"
-            >Галерея</a
+            >Галерея<span class="unicode">▼</span></a
           >
+          <ul class="dropdown">
+            <li class="dropdown-li">
+              <a class="dropdown-li-link" href="#">Відео завершених робіт</a>
+            </li>
+
+            <li class="dropdown-li-two">
+              <a
+                class="dropdown-li-link"
+                href="index.php?do=article-types-ceilings"
+                target="_blank">Види натяжних стель</a
+              >
+            </li>
+
+            <li class="dropdown-li">
+              <a class="dropdown-li-link" href="#"
+                >Освітлення в натяжних стелях</a
+              >
+            </li>
+            <li class="dropdown-li-two">
+              <a class="dropdown-li-link" href="#"
+                >Види карнизів для штор в натяжних стелях</a
+              >
+            </li>
+            <li class="dropdown-li">
+              <a class="dropdown-li-link" href="#"
+                >Декоративні елементи в натяжних стелях</a
+              >
+            </li>
+          </ul>
         </div>
         <div class="header-nav-uk">
           <a class="nav-link-uk-text" href="#" data-scroll="#footer">uk</a>
@@ -148,53 +184,6 @@
           <a class="nav-link-en-text" href="#" data-scroll="#footer">en</a>
         </div>
       </nav>
-
-      <!-- <ul>
-          <li>
-            <a href="#">Як підготувати приміщення до монтажу натяжних стель?</a>
-          </li>
-          <li>
-            <a href="#"
-              >Технічні і експлуатаційні характеристики натяжних стель</a
-            >
-          </li>
-          <li><a href="#">Як доглядати за натяжними стелями з ПВХ</a></li>
-          <li>
-            <a href="#">Замовити натяжні стелі в Києві та Київській області</a>
-          </li>
-        </ul> -->
-
-      <!-- <ul class="coder">
-        <li>
-          <a href="#">Клієнтам</a>
-
-          <ul>
-            <li>
-              <a href="#">
-                Як підготувати приміщення до монтажу натяжних стель?</a
-              >
-            </li>
-            <li>
-              <a href="#">
-                Технічні і експлуатаційні характеристики натяжних стель</a
-              >
-            </li>
-            <li>
-              <a href="#">Як доглядати за натяжними стелями з ПВХ</a>
-            </li>
-            <li>
-              <a href="#">
-                Замовити натяжні стелі в Києві та Київській області</a
-              >
-            </li>
-          </ul>
-        </li>
-        <li><a href="#">Гарантії якості</a></li>
-        <li><a href="#">Договір</a></li>
-        <li><a href="#">Галерея</a></li>
-        <li><a href="#">uk</a></li>
-        <li><a href="#">en</a></li>
-      </ul> -->
     </div>
   </div>
 </div>

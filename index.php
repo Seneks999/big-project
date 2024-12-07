@@ -61,6 +61,7 @@ $footer_page = $value['foot'];
   </head>
 
 <body>
+  <main class="main-content">
 <header>
 <?php 
 include "./header/header.php";
@@ -80,4 +81,5 @@ include "./footer/footer.php";
 </footer>
 
 </body>
+   </main>
 </html>
