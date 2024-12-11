@@ -1,4 +1,9 @@
-<section>
+<section class="container">
+
+<?php 
+include "./slider/slider1.php";
+?>
+
   <h1>Lorem ipsum</h1>
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate qui quis

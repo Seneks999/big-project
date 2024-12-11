@@ -1,3 +1,3 @@
 <?php 
-include "content1.php";
+// include "./slider/".$slider_page.".php";
 ?>

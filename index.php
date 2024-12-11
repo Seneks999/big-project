@@ -25,7 +25,6 @@ $footer_page = $value['foot'];
 }
 
 
-
 ?>
 
 <!DOCTYPE html>
@@ -51,11 +50,20 @@ $footer_page = $value['foot'];
       referrerpolicy="no-referrer"
     />
 
-    <link
+    <!-- <link
       rel="stylesheet"
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
+    /> -->
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    	<link href="./css/slick.css" rel="stylesheet" />
+	    <link href="./css/slick-theme.css" rel="stylesheet" />
+      
+	    <script src="./js/slickNEW.js"></script>
+
+
 
     <title>SteliKyiv</title>
   </head>
